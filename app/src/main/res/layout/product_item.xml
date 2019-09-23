@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="@color/white"
+    android:elevation="3dp"
+    android:padding="8dp"
+    app:cardCornerRadius="7dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/item_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/editImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="John Doe" />
+
+        <ImageView
+            android:id="@+id/editImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:alpha="0.5"
+            android:contentDescription="Edit"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintRight_toLeftOf="@+id/crossImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/crossImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:contentDescription="Delete"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/registrationNumTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Merek"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_product_name" />
+
+        <TextView
+            android:id="@+id/item_product_merek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="@+id/item_product_name"
+            app:layout_constraintLeft_toRightOf="@id/registrationNumTitle"
+            app:layout_constraintStart_toStartOf="@+id/item_product_jenis"
+            app:layout_constraintTop_toBottomOf="@id/item_product_name"
+            tools:text="100145" />
+
+        <TextView
+            android:id="@+id/emailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Jenis"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_merek" />
+
+        <TextView
+            android:id="@+id/item_product_jenis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="@+id/item_product_name"
+            app:layout_constraintLeft_toRightOf="@id/emailTitle"
+            app:layout_constraintStart_toStartOf="@+id/item_product_harga"
+            app:layout_constraintTop_toBottomOf="@id/registrationNumTitle"
+            tools:text="john@gmail.com" />
+
+        <TextView
+            android:id="@+id/phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Harga"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_jenis" />
+
+        <TextView
+            android:id="@+id/item_product_harga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="@+id/item_product_name"
+            app:layout_constraintLeft_toRightOf="@id/phoneTitle"
+            app:layout_constraintStart_toStartOf="@+id/item_product_qty"
+            app:layout_constraintTop_toBottomOf="@id/emailTitle"
+            tools:text="01559541265" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Qty"
+            app:layout_constraintStart_toStartOf="@+id/phoneTitle"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_harga" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Description"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/item_product_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="TextView"
+            android:textColor="#000"
+            app:layout_constraintEnd_toStartOf="@+id/editImageView"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/item_product_qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="TextView"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="@+id/item_product_name"
+            app:layout_constraintStart_toStartOf="@+id/item_product_description"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

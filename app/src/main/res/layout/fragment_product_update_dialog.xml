@@ -1,0 +1,90 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    tools:context=".UpdateProductInfo.ProductUpdateDialogFragment">
+
+    <EditText
+        android:id="@+id/update_product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/update_product_jenis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Jenis Product"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_product_name" />
+
+    <EditText
+        android:id="@+id/update_product_merk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Product Merk"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_product_jenis" />
+
+    <EditText
+        android:id="@+id/update_product_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="text"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_harga" />
+
+    <EditText
+        android:id="@+id/update_harga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Harga"
+        android:inputType="number"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_qty" />
+
+    <EditText
+        android:id="@+id/update_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Qty"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_product_merk" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Update"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cancelButton"
+        app:layout_constraintTop_toBottomOf="@+id/update_product_desc" />
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cancel"
+        app:layout_constraintLeft_toRightOf="@+id/updateButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_product_desc" />
+
+</android.support.constraint.ConstraintLayout>
