@@ -62,13 +62,6 @@ public class DatabaseQueryClass {
 
             cursor = sqLiteDatabase.query(Config.TABLE_PRODUCT, null, null, null, null, null, null, null);
 
-            /**
-                 // If you want to execute raw query then uncomment below 2 lines. And comment out above line.
-
-                 String SELECT_QUERY = String.format("SELECT %s, %s, %s, %s, %s FROM %s", Config.COLUMN_STUDENT_ID, Config.COLUMN_STUDENT_NAME, Config.COLUMN_STUDENT_REGISTRATION, Config.COLUMN_STUDENT_EMAIL, Config.COLUMN_STUDENT_PHONE, Config.TABLE_PRODUCT);
-                 cursor = sqLiteDatabase.rawQuery(SELECT_QUERY, null);
-             */
-
             if(cursor!=null)
                 if(cursor.moveToFirst()){
                     List<Product> productList = new ArrayList<>();
@@ -110,13 +103,6 @@ public class DatabaseQueryClass {
             cursor = sqLiteDatabase.query(Config.TABLE_PRODUCT, null,
                     Config.COLUMN_PRODUCT_ID + " = ? ", new String[]{String.valueOf(id)},
                     null, null, null);
-
-            /**
-                 // If you want to execute raw query then uncomment below 2 lines. And comment out above sqLiteDatabase.query() method.
-
-                 String SELECT_QUERY = String.format("SELECT * FROM %s WHERE %s = %s", Config.TABLE_PRODUCT, Config.COLUMN_STUDENT_REGISTRATION, String.valueOf(registrationNum));
-                 cursor = sqLiteDatabase.rawQuery(SELECT_QUERY, null);
-             */
 
             if(cursor.moveToFirst()){
                 int idProduct = cursor.getInt(cursor.getColumnIndex(Config.COLUMN_PRODUCT_ID));
